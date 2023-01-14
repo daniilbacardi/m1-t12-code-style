@@ -29,8 +29,9 @@ public class DepositCalculator {
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
 
-        if (action == 1) result = calculateSimplePercent(amount, period);
-        else if (action == 2) {
+        if (action == 1) {
+            result = calculateSimplePercent(amount, period);
+        } else if (action == 2) {
             result = calculateComplexPercent(amount, period);
         }
         System.out.println("Результат вклада: " + amount + " за " + period + " лет превратятся в " + result);
